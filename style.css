@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+.wrapper > div{
+    background: orange;
+    /* width: 70px;
+    height: 70px; */
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    background: purple;
+    min-height: 60vh;
+    font-size: 2rem;
+    padding: 1rem;
+
+    /* grid system now  */
+    display: grid;
+    gap: 9px;
+    /* grid-template-columns: auto 1fr 2fr 50px ; */
+    /* grid-template-columns: 100px minmax(300px, 500px) 10px; */
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    /* easier way to do the codes from above */
+    grid-template-areas: 
+    "item1 item2 item3"
+    "item5 item5 item6"
+    "item7 item8 item6"
+    ".     item4    . ";
+}
+
+/* to change location of individual items in grid  */
+.item-1{
+    /* the following codes define where you want your item to start and where to end for example to start in row line 2 and end on row line 4 */
+    /* grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3; */
+    /* the above code can also be written as following */
+    /* grid-row: 2/4; */
+    /* grid-column: 2/4; */
+    grid-area: item1;
+}
+
+
+.item-2{
+    grid-area: item2;
+}
+.item-3{
+    grid-area: item3;
+}
+.item-4{
+    grid-area: item4;
+}
+.item-5{
+    grid-area: item5;
+}
+.item-6{
+    grid-area: item6;
+}
+.item-7{
+    grid-area: item7;
+}
+.item-8{
+    grid-area: item8;
+}
+.item-9{
+    grid-area: item9;
+}
